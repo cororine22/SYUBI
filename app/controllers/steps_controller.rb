@@ -36,13 +36,13 @@ class StepsController < ApplicationController
   def update
     @step = Step.find(params[:id])
     @step.update(steps_params)
-    redirect_to task_steps_path(:task_id)
-end
+    redirect_to task_steps_path(@step.task_id)
+　end
 
   def destroy
     @step = Step.find(params[:id])
     @step.destroy
-    redirect_to task_steps_path(:task_id)
+    redirect_to task_steps_path(@step.task_id)
   end
 
   private
