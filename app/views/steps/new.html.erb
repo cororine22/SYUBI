@@ -1,0 +1,15 @@
+<h1>進捗状況作成</h1>
+<%= form_for [@task, @step], :url => {:action => :create} do |f| %>
+    <div class="form-group">
+    <div><%= f.label :title %></div>
+    <div><%= f.text_field :title %></div>
+    </div>
+  
+    <div class="form-group">
+    <div><%= f.label :detail %></div>
+    <div><%= f.text_field :detail %></div>
+    </div>
+    
+    <div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', task_steps_path %>

@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  #get 'steps/new'
+
+  #get 'steps/index'
+
+  #get 'steps/show'
+
+  #get 'steps/create'
+
+  root 'tasks#index'
+
+  resources :tasks do
+    resources :steps, shallow: true
+  end
 end

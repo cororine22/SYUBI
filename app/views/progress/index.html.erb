@@ -1,0 +1,7 @@
+<h1>Progress#index</h1>
+<p>Find me in app/views/progress/index.html.erb</p>
+
+<% @progress.each do |tweet| %>
+    <hr>
+    <p><span>ツイート内容: </span><%=link_to tweet.body, tweet_path(tweet.id) %></p>
+  <% end %>
