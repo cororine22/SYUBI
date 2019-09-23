@@ -37,7 +37,7 @@ class StepsController < ApplicationController
     @step = Step.find(params[:id])
     @step.update(steps_params)
     redirect_to task_steps_path(@step.task_id)
-　end
+  end
 
   def destroy
     @step = Step.find(params[:id])
@@ -46,7 +46,7 @@ class StepsController < ApplicationController
   end
 
   private
-    def steps_params
-      params.require(:step).permit(:title, :task_id, :detail)
-    end
+  def steps_params
+    params.require(:step).permit(:title, :task_id, :detail)
+  end
 end
