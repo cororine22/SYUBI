@@ -9,6 +9,10 @@
     <div><%= f.label :detail %></div>
     <div><%= f.text_field :detail %></div>
     </div>
+
+    <label><%= f.radio_button :status, :未着手 %>未着手</label>
+    <label><%= f.radio_button :status, :進行中 %>進行中</label> 
+    <label><%= f.radio_button :status, :完了 %>完了</label>
     
     <div><%= f.submit %></div>
 <% end %>
