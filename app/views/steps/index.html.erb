@@ -11,6 +11,7 @@
       <tr>
         <td><%= step.title %></td>
         <td><%= step.detail %></td>
+        <td><%= step.status %></td>
         <td><%= link_to '編集', edit_step_path(step.id) %></td>
         <td><%= link_to '削除', step_path(step.id), method: :delete %></td>
       </tr>
