@@ -20,7 +20,8 @@ class StepsController < ApplicationController
     @step = Step.new(
       title: steps_params[:title],
       detail: steps_params[:detail],
-      task_id: params[:task_id]
+      task_id: params[:task_id],
+      status: "未着手"
     )
 
     if @step.save
