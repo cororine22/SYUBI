@@ -3,12 +3,14 @@
   <thead>
     <tr>
       <th>タスク名</th>
+      <th>達成率</th>
     </tr>
   </thead>
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
+        <td><%= task.steps.select { |i| i.status == "完了"}.count.to_s + "/" + task.steps.count.to_s %></td>
         <td><%= link_to '編集', edit_task_path(task) %></td>
         <td><%= link_to '削除', task_path(task), method: :delete %></td>
         <td><%= link_to "進捗状況一覧", task_steps_path(task.id)%></td>
