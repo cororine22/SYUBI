@@ -2,6 +2,9 @@
 <%= form_for(@task) do |f| %>
   <div><%= f.label :title %></div>
   <div><%= f.text_field :title %></div>
-  <div><%= f.submit %></div>
+  
+  <div>
+        <%= link_to '戻る', tasks_path , class: "btn btn-outline-secondary" %>
+        <%= f.submit "登録", class: "btn btn-outline-primary" %>
+    </div>
 <% end %>
-<%= link_to '戻る', tasks_path %>

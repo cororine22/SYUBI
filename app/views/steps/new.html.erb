@@ -1,5 +1,5 @@
 <h1>進捗状況作成</h1>
-<%= form_for [@task, @step], :url => {:action => :create} do |f| %>
+<%= form_for @step, :url => {:action => :create} do |f| %>
     <div class="form-group">
     <div><%= f.label :title %></div>
     <div><%= f.text_field :title %></div>
@@ -10,6 +10,8 @@
     <div><%= f.text_field :detail %></div>
     </div>
     
-    <div><%= f.submit %></div>
+    <div>
+        <%= link_to '戻る', task_steps_path, class: "btn btn-outline-secondary" %>
+        <%= f.submit "登録", class: "btn btn-outline-primary" %>
+    </div>
 <% end %>
-<%= link_to '戻る', task_steps_path %>
