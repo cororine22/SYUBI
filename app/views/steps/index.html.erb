@@ -12,12 +12,12 @@
         <td><%= step.title %></td>
         <td><%= step.detail %></td>
         <td><%= step.status %></td>
-        <td><%= link_to '編集', edit_step_path(step.id) %></td>
-        <td><%= link_to '削除', step_path(step.id), method: :delete %></td>
+        <td><%= link_to '編集', edit_step_path(step.id), class: "btn btn-success"  %></td>
+        <td><%= link_to '削除', step_path(step.id), method: :delete, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to '戻る', tasks_path %>
-<%= link_to '追加', new_task_step_path %>
+<%= link_to '戻る', tasks_path, class: "btn btn-outline-secondary" %>
+<%= link_to '追加', new_task_step_path, class: "btn btn-outline-primary" %>
 

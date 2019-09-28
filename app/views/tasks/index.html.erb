@@ -12,11 +12,11 @@
       <tr>
         <td><%= task.title %></td>
         <td><%= task.steps.select { |i| i.status == "完了"}.count.to_s + "/" + task.steps.count.to_s %></td>
-        <td><%= link_to '編集', edit_task_path(task) %></td>
-        <td><%= link_to '削除', task_path(task), method: :delete %></td>
-        <td><%= link_to "進捗状況一覧", task_steps_path(task.id)%></td>
+        <td><%= link_to '編集', edit_task_path(task), class: "btn btn-success" %></td>
+        <td><%= link_to '削除', task_path(task), method: :delete, class: "btn btn-danger" %></td>
+        <td><%= link_to "進捗状況一覧", task_steps_path(task.id), class: "btn btn-info"%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to '追加', new_task_path %>
+<%= link_to '追加', new_task_path , class: "btn btn-outline-primary"%>
