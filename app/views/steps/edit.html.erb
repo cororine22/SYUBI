@@ -15,7 +15,7 @@
     <label><%= f.radio_button :status, :未着手 %>未着手</label>
     <label><%= f.radio_button :status, :進行中 %>進行中</label> 
     <label><%= f.radio_button :status, :完了 %>完了</label>
-    
+    <br>
     <div>
         <%= link_to '戻る', task_steps_path(@step.task_id), class: "btn btn-outline-secondary" %>
         <%= f.submit "更新", class: "btn btn-outline-primary"%>

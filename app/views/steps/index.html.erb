@@ -10,11 +10,12 @@
   <tbody>
   <% @steps.each do |step| %>
       <tr>
-        <td><%= step.title %></td>
-        <td><%= step.detail %></td>
-        <td><%= step.status %></td>
-        <td><%= link_to '編集', edit_step_path(step.id), class: "btn btn-success"  %></td>
-        <td><%= link_to '削除', step_path(step.id), method: :delete, class: "btn btn-danger" %></td>
+        <td style="width:30%">
+          <%= step.title %>
+        </td>
+        <td style="width:41%"><%= step.detail %></td>
+        <td style="width:8%"><%= link_to '編集', edit_step_path(step.id), class: "btn btn-success"  %></td>
+        <td style="width:8%"><%= link_to '削除', step_path(step.id), method: :delete, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
