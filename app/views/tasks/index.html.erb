@@ -4,6 +4,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>更新日</th>
       <th>タスク名</th>
       <th>達成率</th>
       <th></th>
@@ -13,8 +14,11 @@
   </thead>
 
   <tbody>
-    <% @tasks.each do |task| %>
+    <% @tasks.sort_by {|k| k.updated_at }.reverse!.each do |task| %>
       <tr>
+        <td style="width:13%">
+          <%= task.updated_at.in_time_zone("Tokyo").strftime("%y/%m/%d %H:%M") %>
+        </td>
         <td style="vertical-align: middle; width: 20%"><%= task.title %></td>
         <td style="vertical-align: middle; width: 30%">
           <% task_count = task.steps.count %>
