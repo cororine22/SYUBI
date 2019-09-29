@@ -3,18 +3,29 @@
 <br>
 <%= form_for (@step) do |f| %>
     <div class="form-group">
-    <div><%= f.label :title %></div>
-    <div><%= f.text_field :title %></div>
-    </div>
-  
-    <div class="form-group">
-    <div><%= f.label :detail %></div>
-    <div><%= f.text_field :detail %></div>
+        <label><%= f.label :title %></label>
+        <div><%= f.text_field :title, class: "form-control" %></div>
     </div>
 
-    <label><%= f.radio_button :status, :未着手 %>未着手</label>
-    <label><%= f.radio_button :status, :進行中 %>進行中</label> 
-    <label><%= f.radio_button :status, :完了 %>完了</label>
+    <div class="form-group">
+        <label><%= f.label :detail %></label>
+        <div><%= f.text_field :detail, class: "form-control" %></div>
+    </div>
+
+    <div class="form-check">
+        <%= f.radio_button :status, :未着手, class: "form-check-input" %>
+        <label class="form-check-label" for="materialUnchecked">未着手</label>
+    </div>
+
+    <div class="form-check">
+        <%= f.radio_button :status, :進行中, class: "form-check-input" %>
+        <label class="form-check-label" for="materialChecked">進行中</label>
+    </div>
+    <div class="form-check">
+        <%= f.radio_button :status, :完了, class: "form-check-input" %>
+        <label class="form-check-label" for="materialUnchecked">完了</label>
+    </div>
+
     <br>
     <div>
         <%= link_to '戻る', task_steps_path(@step.task_id), class: "btn btn-outline-secondary" %>

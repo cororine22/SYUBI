@@ -3,13 +3,13 @@
 <br>
 <%= form_for @step, :url => {:action => :create} do |f| %>
     <div class="form-group">
-    <div><%= f.label :title %></div>
-    <div><%= f.text_field :title %></div>
+        <label><%= f.label :title %></label>
+        <div><%= f.text_field :title, class: "form-control" %></div>
     </div>
   
     <div class="form-group">
-    <div><%= f.label :detail %></div>
-    <div><%= f.text_field :detail %></div>
+        <label><%= f.label :detail %></label>
+        <div><%= f.text_field :detail, class: "form-control" %></div>
     </div>
     
     <div>
