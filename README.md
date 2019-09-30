@@ -26,20 +26,117 @@ It is an application that can manage the progress of the double structure using 
 
 ## Feature
 
-**Each Task shows Progress bar**
+### Each Task shows Progress bar
 <div align="center">
  <img alt="main" src="https://github.com/cororine22/SYUBI/blob/garage/garage/main.png?raw=true">
 </div>
 
-**Nested Collection Task >> Steps**
+`view/tasks/index.html.erb`
+```
+<！-- Progress bar with Bootstrap -->
+<td style="width: 30%">
+  <% task_count = task.steps.count %>
+  <% done_count = task.steps.select { |i| i.status == "完了"}.count %>
+  <% progress = (done_count.to_f / task_count.to_f * 100).to_i rescue 0 %>
+  <span class="progress">
+    <span class="progress-bar progress-bar-animated progress-bar-striped" style="width: <%= progress %>%">
+      <%= done_count %> / <%= task_count %>
+    </span>
+  </span>
+</td>
+```
+
+### Nested Collection Task >> Steps**
 <div align="center">
  <img alt="steps" src="https://github.com/cororine22/SYUBI/blob/garage/garage/steps.png?raw=true">
 </div>
 
-**View & Model Input Validation**
+- Nested Model
+
+`model/task.rb`
+```
+class Task < ApplicationRecord
+    has_many :steps
+    ...
+```
+
+`model/step.rb`
+```
+class Step < ApplicationRecord
+    belongs_to :task
+    ...
+```
+
+
+- Nested routing
+
+```
+$ rails routes
+
+         root GET    /                                   tasks#index
+   task_steps GET    /tasks/:task_id/steps(.:format)     steps#index
+              POST   /tasks/:task_id/steps(.:format)     steps#create
+new_task_step GET    /tasks/:task_id/steps/new(.:format) steps#new
+    edit_step GET    /steps/:id/edit(.:format)           steps#edit
+              PATCH  /steps/:id(.:format)                steps#update
+              PUT    /steps/:id(.:format)                steps#update
+              DELETE /steps/:id(.:format)                steps#destroy
+        tasks GET    /tasks(.:format)                    tasks#index
+              POST   /tasks(.:format)                    tasks#create
+     new_task GET    /tasks/new(.:format)                tasks#new
+    edit_task GET    /tasks/:id/edit(.:format)           tasks#edit
+              PATCH  /tasks/:id(.:format)                tasks#update
+              PUT    /tasks/:id(.:format)                tasks#update
+              DELETE /tasks/:id(.:format)                tasks#destroy
+```
+
+
+- Shallowing
+
+`routes.rb`
+```
+Rails.application.routes.draw do
+  ...
+  resources :tasks do
+    resources :steps, shallow: true
+  end
+end
+```
+
+### View & Model Input Validation
 <div align="center">
  <img alt="validation" src="https://github.com/cororine22/SYUBI/blob/garage/garage/validation.png?raw=true">
 </div>
+
+Input Validation with Form Components
+
+`view/step/new.html.erb`
+```
+<！-- FormValidation -->
+<%= form_for @step, :html => {:class => "is-validated"}, :url => {:action => :create} do |f| %>
+    <div class="form-group">
+        <label><%= f.label :title %></label>
+        <div><%= f.text_field :title, class: "form-control", required:true, maxlength:20, placeholder:"Title" %></div>
+    </div>
+  
+    <div class="form-group">
+        <label><%= f.label :detail %></label>
+        <div><%= f.text_field :detail, class: "form-control", maxlength:140, placeholder:"Detail" %></div>
+    </div>
+```
+
+Model Validation
+
+`model/step.rb`
+```
+class Step < ApplicationRecord
+    ...
+    validates :title, presence: true
+    validates :title, length: { in: 1..20}
+    validates :detail, length: { maximum: 140}
+    ...
+```
+
 
 ## Installation
 To get started with the app, clone the repo and then install the needed gems:
