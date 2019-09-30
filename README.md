@@ -1,8 +1,16 @@
-# SYUBI：タスクの進捗状況を直感的に把握できる進捗管理
-Railsを使った二重構造の進捗を管理することができるアプリです。
+<p align="center">
+<img alt="logo" src="https://github.com/cororine22/SYUBI/blob/garage/garage/logo.png?raw=true">
+</p>
 
-![Version](http://img.shields.io/badge/language-Ruby2.5.3-orange.svg?style=flat)
-![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)
+<H4 align="center">
+タスクの進捗状況を直感的に把握できる進捗管理。<br>
+Railsを使った二重構造の進捗を管理することができるアプリです。
+</H4>
+
+<p align="center">
+<img alt="Ruby" src="http://img.shields.io/badge/language-Ruby2.5.3-orange.svg?style=flat">
+<img alt="license" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat">
+</p>
 
 ## DEMO
 
