@@ -3,8 +3,8 @@
 </p>
 
 <H4 align="center">
-タスクの進捗状況を直感的に把握できる進捗管理。<br>
-Railsを使った二重構造の進捗を管理することができるアプリです。
+Progress management that allows intuitive grasp of task progress<br>
+It is an application that can manage the progress of the double structure using Rails
 </H4>
 
 <p align="center">
@@ -12,23 +12,34 @@ Railsを使った二重構造の進捗を管理することができるアプリ
 <img alt="license" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat">
 </p>
 
-## DEMO
+## Feature
+- You can immediately see the progress rate of the entire task from the bar on the list screen
+- Task progress can be set for each step and can be checked from the progress list screen
+- The steps to be taken are clear because the steps before starting, in progress, and completed are displayed separately
 
-## 特徴
-- タスク全体の進捗率を一覧画面のバーからすぐに把握できます
-- タスクの進捗状況をステップごとに設定でき、進捗一覧画面から確認できます
-- タスクの着手前、進行中のステップと完了済みのステップを分けて表示し、取り組むべきステップが明確です
+## Installation
+To get started with the app, clone the repo and then install the needed gems:
 
-## 使い方
-
-
-## 必要要件
-
-## インストール
-以下をconsoleにて実行。
 ```
-$ bundle install
-$ rails s
+$ bundle install --without production
+```
+
+Next, migrate the database:
+
+```
+$ rails db:migrate
+```
+
+Finally, run the test suite to verify that everything is working correctly:
+
+```
+$ rails test
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+$ rails server
 ```
 
 
