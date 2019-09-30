@@ -16,7 +16,7 @@
   <tbody>
     <% @tasks.sort_by {|k| k.updated_at }.reverse!.each do |task| %>
       <tr>
-        <td style="width:13%">
+        <td style="vertical-align: middle; width:13%">
           <%= task.updated_at.in_time_zone("Tokyo").strftime("%y/%m/%d %H:%M") %>
         </td>
         <td style="vertical-align: middle; width: 20%"><%= task.title %></td>
