@@ -26,17 +26,17 @@ It is an application that can manage the progress of the double structure using 
 
 ## Feature
 
-#### Each Task shows Progress bar
+**Each Task shows Progress bar**
 <p align="center">
  <img alt="main" src="https://github.com/cororine22/SYUBI/blob/garage/garage/main.png?raw=true">
 </p>
 
-#### Nested Collection Task >> Steps
+**Nested Collection Task >> Steps**
 <p align="center">
  <img alt="steps" src="https://github.com/cororine22/SYUBI/blob/garage/garage/steps.png?raw=true">
 </p>
 
-#### View & Model Input Validation
+**View & Model Input Validation**
 <p align="center">
  <img alt="validation" src="https://github.com/cororine22/SYUBI/blob/garage/garage/validation.png?raw=true">
 </p>
