@@ -19,18 +19,18 @@
     <% done_steps = sorted_steps.select{ |i| i.status == "完了"} %>
     <% progress_steps.each do |step| %>
       <tr>
-        <td style="vertical-align: middle; width:13%">
+        <td style="width:13%">
           <%= step.updated_at.in_time_zone("Tokyo").strftime("%y/%m/%d %H:%M") %>
         </td>
-        <td style="vertical-align: middle; width:30%">
+        <td style="width:30%">
           <span class="badge <%=  status_class[step.status] %>" style="width:18%">
             <%= status_label[step.status] %>
           </span> 
           <%= step.title %>
         </td>
-        <td style="vertical-align: middle; width:41%"><%= step.detail %></td>
-        <td style="width:8%"><%= link_to '編集', edit_step_path(step.id), class: "btn btn-success"  %></td>
-        <td style="width:8%"><%= link_to '削除', step_path(step.id), method: :delete, class: "btn btn-danger" %></td>
+        <td style="width:41%"><%= step.detail %></td>
+        <td class="button"><%= link_to '編集', edit_step_path(step.id), class: "btn btn-success"  %></td>
+        <td class="button"><%= link_to '削除', step_path(step.id), method: :delete, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,18 +40,18 @@
   <tbody>
     <% done_steps.each do |step| %>
       <tr>
-        <td style="vertical-align: middle; width:13%">
+        <td style="width:13%">
           <%= step.updated_at.in_time_zone("Tokyo").strftime("%y/%m/%d %H:%M") %>
         </td>
-        <td style="vertical-align: middle; width:30%">
+        <td style="width:30%">
           <span class="badge <%=  status_class[step.status] %>" style="width:18%">
             <%= status_label[step.status] %>
           </span> 
           <%= step.title %>
         </td>
-        <td style="vertical-align: middle; width:41%"><%= step.detail %></td>
-        <td style="width:8%"><%= link_to '編集', edit_step_path(step.id), class: "btn btn-success"  %></td>
-        <td style="width:8%"><%= link_to '削除', step_path(step.id), method: :delete, class: "btn btn-danger" %></td>
+        <td style="width:41%"><%= step.detail %></td>
+        <td class="button"><%= link_to '編集', edit_step_path(step.id), class: "btn btn-success"  %></td>
+        <td class="button"><%= link_to '削除', step_path(step.id), method: :delete, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
