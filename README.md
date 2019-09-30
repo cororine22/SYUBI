@@ -8,7 +8,10 @@ It is an application that can manage the progress of the double structure using 
 </H4>
 
 <p align="center">
-<img alt="Ruby" src="http://img.shields.io/badge/language-Ruby2.5.3-orange.svg?style=flat">
+<img alt="ruby" src="http://img.shields.io/badge/language-Ruby2.5.3-orange.svg?style=flat">
+<img alt="gem" src="http://img.shields.io/badge/gem-2.0.2-orange.svg?style=flat">
+<img alt="platform" src="http://img.shields.io/badge/platform-web-green.svg?style=flat">
+<img alt="release" src="http://img.shields.io/badge/release-v0.0.1-green.svg?style=flat">
 <img alt="license" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat">
 </p>
 
