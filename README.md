@@ -27,19 +27,19 @@ It is an application that can manage the progress of the double structure using 
 ## Feature
 
 **Each Task shows Progress bar**
-<p align="center">
+<div align="center">
  <img alt="main" src="https://github.com/cororine22/SYUBI/blob/garage/garage/main.png?raw=true">
-</p>
+</div>
 
 **Nested Collection Task >> Steps**
-<p align="center">
+<div align="center">
  <img alt="steps" src="https://github.com/cororine22/SYUBI/blob/garage/garage/steps.png?raw=true">
-</p>
+</div>
 
 **View & Model Input Validation**
-<p align="center">
+<div align="center">
  <img alt="validation" src="https://github.com/cororine22/SYUBI/blob/garage/garage/validation.png?raw=true">
-</p>
+</div>
 
 ## Installation
 To get started with the app, clone the repo and then install the needed gems:
