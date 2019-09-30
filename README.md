@@ -46,7 +46,7 @@ It is an application that can manage the progress of the double structure using 
 </td>
 ```
 
-### Nested Collection Task >> Steps**
+### Nested Collection Task >> Steps
 <div align="center">
  <img alt="steps" src="https://github.com/cororine22/SYUBI/blob/garage/garage/steps.png?raw=true">
 </div>
