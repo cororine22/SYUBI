@@ -15,10 +15,31 @@ It is an application that can manage the progress of the double structure using 
 <img alt="license" src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat">
 </p>
 
-## Feature
+## Introduction
+<p align="center">
+ <img alt="demo" src="https://github.com/cororine22/SYUBI/blob/garage/garage/demo.gif?raw=true">
+</p>
+
 - You can immediately see the progress rate of the entire task from the bar on the list screen
 - Task progress can be set for each step and can be checked from the progress list screen
 - The steps to be taken are clear because the steps before starting, in progress, and completed are displayed separately
+
+## Feature
+
+#### Each Task shows Progress bar
+<p align="center">
+ <img alt="main" src="https://github.com/cororine22/SYUBI/blob/garage/garage/main.png?raw=true">
+</p>
+
+#### Nested Collection Task >> Steps
+<p align="center">
+ <img alt="steps" src="https://github.com/cororine22/SYUBI/blob/garage/garage/steps.png?raw=true">
+</p>
+
+#### View & Model Input Validation
+<p align="center">
+ <img alt="validation" src="https://github.com/cororine22/SYUBI/blob/garage/garage/validation.png?raw=true">
+</p>
 
 ## Installation
 To get started with the app, clone the repo and then install the needed gems:
