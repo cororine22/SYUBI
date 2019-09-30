@@ -1,7 +1,9 @@
 class Step < ApplicationRecord
     belongs_to :task
 
-    validates :detail, presence: true
+    validates :title, presence: true
+    validates :title, length: { in: 1..20}
+    validates :detail, length: { maximum: 140}
     
     enum status: {未着手: 0, 進行中: 1,完了: 2}
 end
