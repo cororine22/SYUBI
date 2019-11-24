@@ -1,5 +1,6 @@
 class Step < ApplicationRecord
     belongs_to :task
+    acts_as_list scope: :parent
 
     validates :title, presence: true
     validates :title, length: { in: 1..20}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190924143302) do
+ActiveRecord::Schema.define(version: 20191124114536) do
 
   create_table "progresses", force: :cascade do |t|
     t.string "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20190924143302) do
     t.datetime "updated_at", null: false
     t.string "detail"
     t.integer "status", default: 0, null: false
+    t.integer "position"
   end
 
   create_table "tasks", force: :cascade do |t|
